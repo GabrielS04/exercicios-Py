@@ -6,11 +6,13 @@ while True:
     print('3 - Exibir lista')
     print("4 - Sair")
     opcao = input("Escolha uma opção (1/2/3/4): ")
-    
+
+    #adicionar dados
     if opcao == "1":
         item = input("Nome do item: ")
         lista_compras.append(item)
         print(f"{item} adicionado com sucesso!")
+        #remover dados
     elif opcao == "2":
         item = input("Nome do item para remover: ")
         if item in lista_compras:
@@ -18,6 +20,7 @@ while True:
             print(f"{item} removido com sucesso!")
         else:
             print(f"{item} não encontrado na lista.")
+     #listar dados       
     elif opcao == "3":
         if lista_compras:
             print("Lista de Compras:")
