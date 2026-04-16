@@ -7,14 +7,16 @@ print("4. Sair")
 
 while True:
     opcao = input("Escolha uma opção (1/2/3/4): ")
-    
-    if opcao == "1":
+
+    #coletar dados
+    if opcao == "1": 
         nome = input("Digite o nome do contato: ")
         telefone = input("Digite o telefone do contato: ")
         email = input("Digite o email do contato: ")
         contatos.append({"nome": nome, "telefone": telefone, "email": email})
         print(f"Contato {nome} adicionado com sucesso!")
-    
+
+    #listar dados
     elif opcao == "2":
         if contatos:
             print("\nLista de Contatos:")
@@ -22,7 +24,8 @@ while True:
                 print(f"Nome: {contato['nome']}, Telefone: {contato['telefone']}, email: {contato['email']}")
         else:
             print("Nenhum contato cadastrado.")
-    
+
+    #procurar dados
     elif opcao == "3":
         busca = input("Digite o nome para buscar: ")
         encontrados = [c for c in contatos if busca.lower() in c['nome'].lower()]
@@ -39,4 +42,4 @@ while True:
         break
     
     else:
-        print("Opção inválida. Por favor, escolha uma opção válida.")
+        print("Opção inválida.")
